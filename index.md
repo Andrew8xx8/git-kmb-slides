@@ -54,6 +54,12 @@
 
 !SLIDE
 
+# SHA
+
+`6ff87c4664981e4397625791c8ea3bbb5f2279a3`
+
+!SLIDE
+
 ## blob
 ## tree 
 ## commit
@@ -344,4 +350,12 @@ b96bfe5 HEAD@{9}: rebase finished: returning to refs/heads/develop
 `git remote add [name] [url]`
 
 `git remote rm [name]`
+
+!SLIDE
+
+# Ссылки
+* http://8xx8.ru/git-kmb
+* http://githowto.com/
+* http://git-scm.com/book/ru
+
 
