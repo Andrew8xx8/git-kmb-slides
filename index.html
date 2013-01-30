@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>git: Курс молодого бойца</title>
+    <meta charset='utf-8' />
+    <meta content='width=1024, user-scalable=no' name='viewport' />
+    <!-- deck.js's core css -->
+    <link href="deck.js/core/deck.core.css" rel="stylesheet" type="text/css"/>
+    <!-- deck.js extension CSS files -->
+    <link href="deck.js/extensions/scale/deck.scale.css" rel="stylesheet" type="text/css"/>
+    <link href="deck.js/extensions/navigation/deck.navigation.css" rel="stylesheet" type="text/css"/>
+    <link href="deck.js/extensions/status/deck.status.css" rel="stylesheet" type="text/css"/>
+    <link href="deck.js/extensions/codemirror/deck.codemirror.css" rel="stylesheet" type="text/css"/>
+    <link href="deck.js/extensions/hash/deck.hash.css" rel="stylesheet" type="text/css"/>
+    <link href="deck.js/extensions/menu/deck.menu.css" rel="stylesheet" type="text/css"/>
+    <link href="deck.js/extensions/goto/deck.goto.css" rel="stylesheet" type="text/css"/>
+    <!-- all css in the css dir: Keydown CSS, your custom CSS, and themes from deck.js -->
+    <link href="css/keydown.css" rel="stylesheet" type="text/css"/>
+    <link href="css/horizontal-slide.css" rel="stylesheet" type="text/css"/>
+    <link href="css/swiss.css" rel="stylesheet" type="text/css"/>
+    <link href="css/default.css" rel="stylesheet" type="text/css"/>
+    <link href="css/git-kmb.css" rel="stylesheet" type="text/css"/>
+    <!-- Modernizr (provided for legacy browsers) -->
+    <script src="deck.js/support/modernizr.custom.js" type="text/javascript"></script>
+  </head>
+  <body class='deck-container keydown'>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>git</h1>
+        
+        <h2>Курс молодого бойца</h2>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h2>Создать</h2>
+        
+        <h2>Сохранить</h2>
+        
+        <h2>Изменить</h2>
+        
+        <h1>Сохранить снова</h1>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h2>Что</h2>
+        
+        <h2>Кем</h2>
+        
+        <h2>Когда</h2>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h2>Система контроля изменений (версий)</h2>
+        
+        <ul>
+        <li>Хранить информацию об изменениях</li>
+        <li>Работать одновременно с несколькими клиентами</li>
+        <li>Работать быстро</li>
+        <li>Работать стабильно</li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>git</h1>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h2>Информация об изменениях</h2>
+        
+        <p><img src="images/screen1.png" /></p>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <p><img src="images/screen3.png" height="600px"/></p>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h2>Распрделённость</h2>
+        
+        <p><img src="images/screen2.png" /></p>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Изнутри</h1>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h2>blob</h2>
+        
+        <h2>tree</h2>
+        
+        <h2>commit</h2>
+        
+        <h2>tag</h2>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+  <div class='spacer top'></div>
+  <div class='content'>
+    <h2>blob</h2>
+
+<p><img src="images/inside1.png" /></p>
+
+<p><code>$ git show 6ff87c4664</code></p>
+
+<p><textarea class='code' display='none' mode='text'>Note that the only valid version of the GPL as far as this project&#x000A;is concerned is _this_ particular version of the license (ie v2, not&#x000A;v2.2 or v3.x or whatever), unless explicitly otherwise stated.&#x000A;...</textarea>
+</p>
+  </div>
+  <div class='spacer bottom'></div>
+</section>
+    <section class='slide'>
+  <div class='spacer top'></div>
+  <div class='content'>
+    <h2>tree</h2>
+
+<p><img src="images/inside2.png" /></p>
+
+<p><code>$ git ls-tree fb3a8bdd0ce</code></p>
+
+<p><textarea class='code' display='none' mode='text'>100644 blob 63c918c667fa005ff12ad89437f2fdc80926e21c    .gitignore&#x000A;100644 blob 289b046a443c0647624607d471289b2c7dcd470b    INSTALL&#x000A;040000 tree 2fb783e477100ce076f6bf57e4a6f026013dc745    Documentation&#x000A;...</textarea>
+</p>
+  </div>
+  <div class='spacer bottom'></div>
+</section>
+    <section class='slide'>
+  <div class='spacer top'></div>
+  <div class='content'>
+    <h2>commit</h2>
+
+<p><img src="images/inside3.png" /></p>
+
+<p><code>$ git show -s --pretty=raw 2be7fcb476</code></p>
+
+<p><textarea class='code' display='none' mode='text'>commit 2be7fcb4764f2dbcee52635b91fedb1b3dcf7ab4&#x000A;tree fb3a8bdd0ceddd019615af4d57a53f43d8cee2bf&#x000A;parent 257a84d9d02e90447b149af58b271c19405edb6a&#x000A;author Dave Watson  1187576872 -0400&#x000A;committer Junio C Hamano  1187591163 -0700&#x000A;...</textarea>
+</p>
+  </div>
+  <div class='spacer bottom'></div>
+</section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Коммит =</h1>
+        
+        <h2>Дерево + Родитель + Автор + Коммитер + Комментарий</h2>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+  <div class='spacer top'></div>
+  <div class='content'>
+    <p><textarea class='code' display='none' mode='text'>.&#x000A;|-- README&#x000A;`-- lib&#x000A;|-- inc&#x000A;|   `-- tricks.rb&#x000A;`-- mylib.rb</textarea>
+</p>
+    
+    <p><img src="images/inside4.png" /></p>
+  </div>
+  <div class='spacer bottom'></div>
+</section>
+    <section class='slide'>
+  <div class='spacer top'></div>
+  <div class='content'>
+    <h2>Ссылки</h2>
+
+<p><code>.git/refs</code></p>
+
+<p><code>.git/refs/heads</code></p>
+
+<p><code>.git/refs/tags</code></p>
+  </div>
+  <div class='spacer bottom'></div>
+</section>
+    <section class='slide'>
+  <div class='spacer top'></div>
+  <div class='content'>
+    <p><code>git update-ref refs/heads/master 1a410efbd13591db07496601ebc7a059dd55cfe9</code></p>
+  </div>
+  <div class='spacer bottom'></div>
+</section>
+    <section class='slide'>
+  <div class='spacer top'></div>
+  <div class='content'>
+    <h2>HEAD</h2>
+
+<p><textarea class='code' display='none' mode='text'>$ cat .git/HEAD &#x000A;ref: refs/heads/master</textarea>
+</p>
+
+<p><code>git checkout test</code></p>
+
+<p><textarea class='code' display='none' mode='text'>$ cat .git/HEAD &#x000A;ref: refs/heads/test</textarea>
+</p>
+  </div>
+  <div class='spacer bottom'></div>
+</section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h2>Теги (метки)</h2>
+        
+        <ul>
+        <li>Почти как коммит, только тег</li>
+        <li>Указатель который никогда не перемещяется</li>
+        <li>Объект-паразит</li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Снаружи</h1>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>no GUI</h1>
+        
+        <h1>only CLI</h1>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <p><img src="images/outside1.png" /></p>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+  <div class='spacer top'></div>
+  <div class='content'>
+    <h2>Workflow</h2>
+
+<p><code>git add FILENAME</code></p>
+
+<p><code>git commit -m "My pretty commit"</code></p>
+
+<p><code>git pull --rebase</code></p>
+
+<p><code>git push</code></p>
+  </div>
+  <div class='spacer bottom'></div>
+</section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h2>Всегда коммитьте изменения</h2>
+        
+        <h2>Пока не сделан push можно делать что угодно</h2>
+        
+        <h2>Читайте что пишет git</h2>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+  <div class='spacer top'></div>
+  <div class='content'>
+    <h2>Где?</h2>
+
+<p><code>git status</code></p>
+
+<p><code>git where [ХЕШ]</code></p>
+  </div>
+  <div class='spacer bottom'></div>
+</section>
+    <section class='slide'>
+  <div class='spacer top'></div>
+  <div class='content'>
+    <h2>Что?</h2>
+
+<p><code>git log [ОТКУДА] [КУДА]</code></p>
+
+<p><code>git diff [ОТКУДА] [КУДА]</code></p>
+
+<p><code>git blame [ФАЙЛ]</code></p>
+
+<p><code>git status -v</code></p>
+  </div>
+  <div class='spacer bottom'></div>
+</section>
+    <section class='slide'>
+  <div class='spacer top'></div>
+  <div class='content'>
+    <h2>Отдать/Плучить</h2>
+
+<p><code>git fetch</code></p>
+
+<p><code>git pull</code></p>
+
+<p><code>git push</code></p>
+
+<p><code>git push --all</code></p>
+  </div>
+  <div class='spacer bottom'></div>
+</section>
+    <section class='slide'>
+  <div class='spacer top'></div>
+  <div class='content'>
+    <h2>Ой, врените всё назад</h2>
+
+<p><code>git reset [--hard|soft] [ХЕШ]</code></p>
+
+<p><code>git checkout ИМЯ_ФАЙЛА</code></p>
+
+<p><code>git revert ХЕШ_КОММИТА</code></p>
+  </div>
+  <div class='spacer bottom'></div>
+</section>
+    <section class='slide'>
+  <div class='spacer top'></div>
+  <div class='content'>
+    <h2>Жонглируем ветками</h2>
+
+<p><code>git checkout -b new_branch</code></p>
+
+<p><code>git branch -D new_branch</code></p>
+
+<p><code>git push origin :new_branch</code></p>
+  </div>
+  <div class='spacer bottom'></div>
+</section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h2>Fast Forward Merge</h2>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+  <div class='spacer top'></div>
+  <div class='content'>
+    <p><code>git checkout develop</code></p>
+
+<p><code>git merge feature</code></p>
+
+<p><img src="images/mr1.png" /></p>
+  </div>
+  <div class='spacer bottom'></div>
+</section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h2>No Fast Forward Merge</h2>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+  <div class='spacer top'></div>
+  <div class='content'>
+    <p><code>git checkout develop</code></p>
+
+<p><code>git merge --no-ff feature</code></p>
+
+<p><img src="images/mr2.png" /></p>
+  </div>
+  <div class='spacer bottom'></div>
+</section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h2>Rebase &amp; Fast Forward Merge</h2>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+  <div class='spacer top'></div>
+  <div class='content'>
+    <p><code>git checkout rebase develop</code></p>
+
+<p><code>git checkout develop</code></p>
+
+<p><code>git merge feature</code></p>
+
+<p><img src="images/mr3.png" /></p>
+  </div>
+  <div class='spacer bottom'></div>
+</section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h2>Конфликты</h2>
+        
+        <ul>
+        <li>both modified</li>
+        <li>deleted by us</li>
+        <li>deleted by them</li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+  <div class='spacer top'></div>
+  <div class='content'>
+    <p><code>git rebase --continue</code></p>
+
+<p><code>git rebase --skip</code></p>
+
+<hr />
+
+<p><code>git commit</code></p>
+  </div>
+  <div class='spacer bottom'></div>
+</section>
+    <section class='slide'>
+  <div class='spacer top'></div>
+  <div class='content'>
+    <h2>reflog</h2>
+
+<p><code>git reflog</code></p>
+
+<p><textarea class='code' display='none' mode='text'>2e3e7c6 HEAD@{0}: commit: Link on issue tracker improved&#x000A;6cda7f1 HEAD@{1}: commit: Migration added&#x000A;728330f HEAD@{2}: commit: Issue tracker param added to projects&#x000A;b8b65cb HEAD@{3}: commit: Enumerize gem added&#x000A;9dbd5e3 HEAD@{4}: commit: Undev settings added&#x000A;e131b42 HEAD@{5}: commit: Link to issues follows to redmine now&#x000A;b96bfe5 HEAD@{6}: checkout: moving from develop to feature/issues-link-22282&#x000A;b96bfe5 HEAD@{7}: checkout: moving from feature/edit-images-22339 to develop&#x000A;b96bfe5 HEAD@{8}: checkout: moving from develop to feature/edit-images-22339&#x000A;b96bfe5 HEAD@{9}: rebase finished: returning to refs/heads/develop</textarea>
+</p>
+  </div>
+  <div class='spacer bottom'></div>
+</section>
+    <section class='slide'>
+  <div class='spacer top'></div>
+  <div class='content'>
+    <h2>cherry-pick</h2>
+
+<p><code>git cherry-pick [ХЕШ]</code></p>
+  </div>
+  <div class='spacer bottom'></div>
+</section>
+    <section class='slide'>
+  <div class='spacer top'></div>
+  <div class='content'>
+    <h2>Бинарный поиск по коммитам</h2>
+
+<p><code>git bisect start</code></p>
+
+<p><code>git bisect bad</code></p>
+
+<p><code>git bisect good v1.0</code></p>
+  </div>
+  <div class='spacer bottom'></div>
+</section>
+    <section class='slide'>
+  <div class='spacer top'></div>
+  <div class='content'>
+    <h2>remotes</h2>
+
+<p><code>origin</code> - не всегда единственный и главный репозиторий</p>
+
+<p><code>git remote -v</code></p>
+
+<p><code>git remote add [name] [url]</code></p>
+
+<p><code>git remote rm [name]</code></p>
+  </div>
+  <div class='spacer bottom'></div>
+</section>
+    <!-- deck.js navigation extension -->
+    <a class='deck-prev-link' href='#' title='Previous'>&#8592;</a>
+    <a class='deck-next-link' href='#' title='Next'>&#8594;</a>
+    <!-- deck.js hash extension -->
+    <a class='deck-permalink' href='.' title='Permalink to this slide'>#</a>
+    <!-- deck.js status extension -->
+    <p class='deck-status'>
+      <span class='deck-status-current'></span>
+      /
+      <span class='deck-status-total'></span>
+    </p>
+    <!-- jQuery & deck.js -->
+    <script src="deck.js/support/jquery.1.6.4.min.js" type="text/javascript"></script>
+    <script src="deck.js/core/deck.core.js" type="text/javascript"></script>
+    <!-- deck.js extension JS files -->
+    <script src="deck.js/extensions/scale/deck.scale.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/navigation/deck.navigation.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/status/deck.status.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/deck.codemirror.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/codemirror.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/sparql/sparql.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/ruby/ruby.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/rst/rst.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/yaml/yaml.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/plsql/plsql.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/r/r.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/php/php.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/velocity/velocity.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/python/python.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/smalltalk/smalltalk.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/xmlpure/xmlpure.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/scheme/scheme.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/haskell/haskell.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/clojure/clojure.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/css/css.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/diff/diff.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/xml/xml.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/htmlmixed/htmlmixed.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/stex/stex.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/clike/clike.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/javascript/javascript.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/coffeescript/coffeescript.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/lua/lua.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/hash/deck.hash.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/menu/deck.menu.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/goto/deck.goto.js" type="text/javascript"></script>
+    <!-- your custom JS here, including call to initialize deck.js-codemirror -->
+    <script src="js/git-kmb.js" type="text/javascript"></script>
+    <!-- Initialize the deck. -->
+    <script type='text/javascript'>
+      $(function() { $.deck('.slide'); });
+    </script>
+  </body>
+</html>

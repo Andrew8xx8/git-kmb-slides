@@ -1,0 +1,22 @@
+.deck-status {
+    display: none;
+}
+.keydown.deck-container .slide .content > h1, .keydown.deck-container .slide .content > h2{
+	text-align: center;
+}
+.keydown.deck-container .slide .content > ul {
+	-webkit-box-align: start;
+	-moz-box-align: start;
+	-ms-box-align: start;
+	box-align: start;
+	-webkit-box-pack: start;
+	-moz-box-pack: start;
+	-ms-box-pack: start;
+	box-pack: start; 
+}
+.deck-container h2 {
+	color: #46A5E5;
+}
+.keydown.deck-container h1 {
+	color: #A1C436;
+}
