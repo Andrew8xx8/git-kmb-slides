@@ -1,25 +1,25 @@
 # git: Курс молодого бойца
 
 
-!SLIDE 
+!SLIDE
 
 # git
 ## Курс молодого бойца
 
-!SLIDE 
+!SLIDE
 
 ## Создать
 ## Сохранить
 ## Изменить
 # Сохранить снова
 
-!SLIDE 
+!SLIDE
 
 ## Что
 ## Кем
 ## Когда
 
-!SLIDE 
+!SLIDE
 
 ## Система контроля изменений (версий)
 
@@ -28,37 +28,37 @@
 * Работать быстро
 * Работать стабильно
 
-!SLIDE 
+!SLIDE
 
 # git
 
-!SLIDE 
+!SLIDE
 
 ## Информация об изменениях
 
 <img src="images/screen1.png" />
 
-!SLIDE 
+!SLIDE
 
 <img src="images/screen3.png" height="600px"/>
 
-!SLIDE 
+!SLIDE
 
-## Распрделённость
+## Распределённость
 
 <img src="images/screen2.png" />
 
-!SLIDE 
+!SLIDE
 
 # Изнутри
 
 !SLIDE
 
 ## blob
-## tree 
+## tree
 ## commit
 ## tag
- 
+
 !SLIDE
 
 ## blob
@@ -72,7 +72,7 @@ is concerned is _this_ particular version of the license (ie v2, not
 v2.2 or v3.x or whatever), unless explicitly otherwise stated.
 ...
 ```
- 
+
 !SLIDE
 
 ## tree
@@ -135,19 +135,19 @@ committer Junio C Hamano  1187591163 -0700
 
 `git update-ref refs/heads/master 1a410efbd13591db07496601ebc7a059dd55cfe9`
 
-!SLIDE 
+!SLIDE
 
 ## HEAD
 
 ```text
-$ cat .git/HEAD 
+$ cat .git/HEAD
 ref: refs/heads/master
 ```
 
 `git checkout test`
 
 ```text
-$ cat .git/HEAD 
+$ cat .git/HEAD
 ref: refs/heads/test
 ```
 
@@ -156,7 +156,7 @@ ref: refs/heads/test
 ## Теги (метки)
 
 * Почти как коммит, только тег
-* Указатель который никогда не перемещяется
+* Указатель который никогда не перемещается
 * Объект-паразит
 
 !SLIDE
@@ -187,7 +187,7 @@ ref: refs/heads/test
 
 ## Всегда коммитьте изменения
 ## Пока не сделан push можно делать что угодно
-## Читайте что пишет git
+## Читайте, что пишет git
 
 !SLIDE
 
@@ -195,7 +195,7 @@ ref: refs/heads/test
 
 `git status`
 
-`git where [ХЕШ]`
+`git branch -av --contains [ХЕШ]`
 
 !SLIDE
 
@@ -211,7 +211,7 @@ ref: refs/heads/test
 
 !SLIDE
 
-## Отдать/Плучить
+## Отдать/Получить
 
 `git fetch`
 
@@ -223,7 +223,7 @@ ref: refs/heads/test
 
 !SLIDE
 
-## Ой, врените всё назад
+## Ой, верните всё назад
 
 `git reset [--hard|soft] [ХЕШ]`
 
@@ -323,7 +323,7 @@ b96bfe5 HEAD@{9}: rebase finished: returning to refs/heads/develop
 
 `git cherry-pick [ХЕШ]`
 
-!SLIDE 
+!SLIDE
 
 ## Бинарный поиск по коммитам
 
@@ -344,4 +344,3 @@ b96bfe5 HEAD@{9}: rebase finished: returning to refs/heads/develop
 `git remote add [name] [url]`
 
 `git remote rm [name]`
-
